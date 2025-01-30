@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../Css/CampoPost.css';
 import Post from '../Componentes/Post';
 import Paginacion from '../Componentes/Paginacion';
-
+import io from 'socket.io-client';
+const socket = io('http://localhost:3000');
 const CampoPost = ({ busqueda }) => {
   const [render, setRender] = useState([]);
   const [paginaactual, setpaginaactual] = useState(1);
@@ -27,6 +28,15 @@ const CampoPost = ({ busqueda }) => {
       devuelvedatos(`http://localhost:3000/busqueda?titulo=${busqueda}`)
     }
   },[busqueda])
+  useEffect(() => {
+    socket.on('nuevoPost', (nuevoPost) => {
+      setRender(prevRender => [nuevoPost, ...prevRender]);
+    });
+
+    return () => {
+      socket.off('nuevoPost');
+    };
+  }, []);
   return (
     <div className='Contenedor'>
       
