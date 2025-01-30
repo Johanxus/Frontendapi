@@ -4,7 +4,6 @@ import Post from '../Componentes/Post';
 import Paginacion from '../Componentes/Paginacion';
 
 const CampoPost = ({ busqueda }) => {
-  const [pasarPost3, setPasarPost3] = useState({ titulo: "", input: "" });
   const [render, setRender] = useState([]);
   const [paginaactual, setpaginaactual] = useState(1);
   const limitepagina = 3;
