@@ -13,7 +13,7 @@ const Insertar = ({setClickeado, setPasarPost}) => {
     setPasarPost(post)
   }
   async function envioback() {
-      const peticion = await fetch('http://localhost:3000/crear?titulo='+post.titulo+'&post='+post.input+'')
+      const peticion = await fetch('https://backendapi-production-ee7a.up.railway.app/crear?titulo='+post.titulo+'&post='+post.input+'')
   }
   
   
