@@ -1,0 +1,53 @@
+.Caja2{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    align-items: center;
+    padding-bottom:10px ;
+    z-index: 10;
+    position: absolute;
+    background-color: #242424;
+    box-shadow: 0px 0px 300px 200px rgba(0, 0, 0, 0.91);
+    left: 30%;
+    top: 20%;
+    padding: 10px;
+}
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+}
+.enviar{
+    width: 100px;
+    height: 30px;
+}
+.conten1{
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+.parte1{
+    width: 80%;
+    line-height: 20px;
+    padding-left: 250px;
+    margin-bottom: 10px;
+}
+.parte2{
+    width: 20%;
+    color: rgb(255, 87, 34)
+}
+.parte2 p {
+    cursor: pointer;
+}
+.enviar{
+    margin-top: 10px;
+}
+.labelcrear{
+    width: 100%;
+}
+.tamañoinput{
+    width: 99%;
+}

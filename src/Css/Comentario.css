@@ -1,0 +1,23 @@
+.CajaComentario{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    background-color: #242424;
+    box-sizing: border-box;
+}
+.comentario2{
+    width: 70%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: start;
+}
+.Usuario{
+    margin-bottom: 0;
+    font-size: 20px;
+    margin-top: 10px;
+}

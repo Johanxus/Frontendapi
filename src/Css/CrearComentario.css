@@ -1,0 +1,26 @@
+.comentario{
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-end;
+    padding: 10px;
+    background-color: #242424;
+
+}
+.comentarioarea{
+    width: 100%;
+}
+.enviar{
+    width: 100px;
+    height: auto;
+    display: flex;
+    background-color: rgb(255, 87, 34);
+    color: rgb(255, 255, 255);
+    
+}
+.labeltext{
+    width: 100%;
+    text-align: start;
+}
+.inputusuario{
+    width: 100%;
+}

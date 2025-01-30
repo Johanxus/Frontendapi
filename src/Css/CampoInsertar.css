@@ -1,0 +1,23 @@
+.ContenedorInput{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+
+}
+input{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    
+}
+.cajainsertar{
+    width: 100%;
+}
+.insertarinput{
+    cursor: pointer;
+}
