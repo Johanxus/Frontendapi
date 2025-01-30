@@ -3,7 +3,7 @@ import '../Css/CampoPost.css';
 import Post from '../Componentes/Post';
 import Paginacion from '../Componentes/Paginacion';
 import io from 'socket.io-client';
-const socket = io('backendapi-production-ee7a.up.railway.app');
+const socket = io('https://backendapi-production-ee7a.up.railway.app');
 const CampoPost = ({ busqueda }) => {
   const [render, setRender] = useState([]);
   const [paginaactual, setpaginaactual] = useState(1);

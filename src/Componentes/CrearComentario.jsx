@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../Css/CrearComentario.css'
 import Comentario from './Comentario'
 import io from 'socket.io-client';
-const socket = io('backendapi-production-ee7a.up.railway.app');
+const socket = io('https://backendapi-production-ee7a.up.railway.app');
 const CrearComentario = ({id}) => {
   const [datosComentario, setDatosComentario] = useState({usuario: "", comentario: ""})
   console.log(id)
