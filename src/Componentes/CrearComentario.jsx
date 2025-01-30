@@ -25,10 +25,10 @@ const CrearComentario = ({id}) => {
     }
   }
   async function crearcoment(){
-    const peticion = await fetch('http://localhost:3000/crearcomentario?blogid='+id+'&nombre='+datosComentario.usuario+'&comentario='+datosComentario.comentario+'')
+    const peticion = await fetch('https://backendapi-production-ee7a.up.railway.app/crearcomentario?blogid='+id+'&nombre='+datosComentario.usuario+'&comentario='+datosComentario.comentario+'')
   }
   async function mostrarcoment(){
-    const conexion = await fetch('http://localhost:3000/comentarios?id='+id+'')
+    const conexion = await fetch('https://backendapi-production-ee7a.up.railway.app/comentarios?id='+id+'')
     if(conexion.ok){
       const resultados = await conexion.json()
       setArrayrender(resultados)

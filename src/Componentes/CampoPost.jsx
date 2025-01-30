@@ -23,9 +23,9 @@ const CampoPost = ({ busqueda }) => {
       }
   useEffect(()=>{
     if(busqueda.trim().length === 0){
-      devuelvedatos("http://localhost:3000/posts")
+      devuelvedatos("https://backendapi-production-ee7a.up.railway.app/posts")
     }else{
-      devuelvedatos(`http://localhost:3000/busqueda?titulo=${busqueda}`)
+      devuelvedatos(`https://backendapi-production-ee7a.up.railway.app/busqueda?titulo=${busqueda}`)
     }
   },[busqueda])
   useEffect(() => {

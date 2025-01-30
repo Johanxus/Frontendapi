@@ -8,6 +8,7 @@ const Post = ({pasarPost, clave}) => {
     <div className='Caja'>
       {/*<p>{clave}</p> */}
        <h1>{pasarPost.title}</h1>
+       {/*<p>{pasarPost.fechadePublicacion}</p>*/}
        <h3>{pasarPost.post}</h3>
       <SeccionComentario pasarPost={pasarPost}/>
       
