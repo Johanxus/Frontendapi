@@ -3,7 +3,7 @@ import '../Css/Post.css'
 import SeccionComentario from './SeccionComentario'
 const Post = ({pasarPost, clave}) => {
   
-  
+
   return (
     <div className='Caja'>
       {/*<p>{clave}</p> */}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../Css/CrearComentario.css'
 import Comentario from './Comentario'
+import io from 'socket.io-client';
+const socket = io('http://localhost:3000');
 const CrearComentario = ({id}) => {
   const [datosComentario, setDatosComentario] = useState({usuario: "", comentario: ""})
   console.log(id)
@@ -13,7 +15,7 @@ const CrearComentario = ({id}) => {
     
   }
   const [arrayrender, setArrayrender] = useState([])
-  console.log(datosComentario)
+  console.log(id)
   const enviodatos = (e) =>{
     e.preventDefault();
     const {usuario, comentario} = datosComentario;
@@ -35,6 +37,18 @@ const CrearComentario = ({id}) => {
   useEffect(()=>{
     mostrarcoment()
   },[arrayrender])
+
+    useEffect(()=>{
+      socket.on('comentario', (comentario) => {
+        if (comentario.blogid === id) {
+          setArrayrender((prevState) => [...prevState, comentario]);
+        }
+      });
+  
+      return () => {
+        socket.off('nuevoComentario');
+      };
+    },[id])
   return (
     <div className='comentario'>
       <label htmlFor='usuario' className='labeltext'> Usuario

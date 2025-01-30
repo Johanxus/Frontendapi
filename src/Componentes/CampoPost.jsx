@@ -37,11 +37,12 @@ const CampoPost = ({ busqueda }) => {
       socket.off('nuevoPost');
     };
   }, []);
+  console.log(render)
   return (
     <div className='Contenedor'>
       
       {limitesactuales.map((item, index) => (
-        <Post key={index} pasarPost={item} clave={index + iniciaindex} />
+        <Post key={item.id} pasarPost={item} clave={index + iniciaindex} />
       ))}
       {paginastotal > 1 && (
         <Paginacion paginaactual={paginaactual} paginastotal={paginastotal} cambiodePagina={cambiodepagina} />

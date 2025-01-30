@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import '../Css/SeccionComentario.css'
 import PostAmpliado from './PostAmpliado'
-const SeccionComentario = ({pasarPost}) => {
+const SeccionComentario = ({pasarPost, id}) => {
   const [click2, setClick2] = useState(false)
   const click3 = useCallback(() => {
     setClick2(prevClick2 => !prevClick2);
