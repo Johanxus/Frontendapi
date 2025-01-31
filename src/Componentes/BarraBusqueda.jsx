@@ -12,7 +12,7 @@ const BarraBusqueda = ({paso}) => {
   return (
     <div className='cajita'>
       <label htmlFor="busqueda" className='busqueda'>
-        <input type='search' id='busqueda' name='busqueda' onChange={actualizar}/>
+        <input type='search' id='busqueda' name='busqueda' onChange={actualizar} placeholder='Da dlick y escribe algo para buscar'/>
         
       </label>
     </div>
